@@ -1,0 +1,2026 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Шлеёв Родион Вадимович ПИ-428Б Система жизнеобеспечениая подводной лодки</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">MainWindow
+{
+	background-color: #38302e;
+	color: ccdad1;
+	
+	font-family: Montserrat ExtraBold;
+}</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::TabShape::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget_submarine_view" native="true">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>10</y>
+      <width>470</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #f4f3ee;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+/*border: 2px solid #094065; &lt;----- цвет границы*/ </string>
+    </property>
+    <widget class="QPushButton" name="submarine_button">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>10</y>
+       <width>451</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/submarine.png</normaloff>images/submarine.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>440</width>
+       <height>170</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_cell_1">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>180</y>
+       <width>181</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #f4f3ee;
+background-color: rgba(0, 166, 251, 0.42);
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+/*border: 2px solid #094065; &lt;----- цвет границы*/ </string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_cell_2">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>180</y>
+       <width>151</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #f4f3ee;
+background-color: rgba(0, 166, 251, 0.42);
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+/*border: 2px solid #094065; &lt;----- цвет границы*/ </string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_cell_3">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>140</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #f4f3ee;
+background-color: rgba(0, 166, 251, 0.42);
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+/*border: 2px solid #094065; &lt;----- цвет границы*/ </string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>451</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 18pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string>Состояние подводной лодки</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_control_panel" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>880</width>
+      <height>220</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #f4f3ee;
+background-color: #6f6866;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+/*border: 2px solid #094065; &lt;----- цвет границы*/ </string>
+    </property>
+    <widget class="QPushButton" name="button_critical_oxygen">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>70</y>
+       <width>160</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Нехватка кислорода</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_critical_temp">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>140</y>
+       <width>160</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 8pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Критическая температура</string>
+     </property>
+    </widget>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>381</width>
+       <height>211</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::pane
+{
+	border: 1px;
+	border-radius: 15px; 
+	background: #6f6866;
+	font-size: 10pt;
+	font-family: Montserrat ExtraBold;
+
+}
+QTabBar::tab
+{
+	background: #788585;
+	min-width: 22ex;
+	min-height: 5ex;
+	margin-left: 15px;
+	left: -5px;
+	border-radius: 8px;
+	color: white;
+	border: 2px solid #38302e
+}
+
+QTabBar::tab::selected
+{
+	background: #ccdad1;
+	color: black;
+}
+
+QTabBar::tab::hover
+{
+	background: #9caea9;
+	color: black;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Показатели отсеков</string>
+      </attribute>
+      <widget class="QWidget" name="widget" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>361</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+       </property>
+       <widget class="QWidget" name="widget_indicators_cell_1" native="true">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>10</y>
+          <width>71</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 10px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>51</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Отсек 1</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_oxygen_1">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>71</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>21</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_temperature_1">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>69</y>
+           <width>71</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Montserrat ExtraBold</family>
+           <pointsize>15</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>21</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LayoutDirection::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Кислород (%)</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>79</y>
+          <width>101</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Montserrat ExtraBold</family>
+          <pointsize>8</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LayoutDirection::LeftToRight</enum>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 8pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
+        <property name="text">
+         <string>Температура (°С)</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="widget_indicators_cell_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>10</y>
+          <width>71</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 10px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>51</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Отсек 2</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_oxygen_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>71</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>21</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_temperature_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>69</y>
+           <width>71</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Montserrat ExtraBold</family>
+           <pointsize>15</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>21</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="widget_indicators_cell_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>10</y>
+          <width>71</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 10px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <widget class="QLabel" name="label_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>51</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Отсек 3</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_oxygen_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>71</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>21</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_temperature_3">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>69</y>
+           <width>71</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Montserrat ExtraBold</family>
+           <pointsize>15</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>21</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Экономические показатели</string>
+      </attribute>
+      <widget class="QWidget" name="widget_2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>361</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+       </property>
+       <widget class="QWidget" name="widget_indicators_cell_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>211</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 10px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>191</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Общие расходы </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_expenses">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>20</y>
+           <width>151</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_rouble">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>20</y>
+           <width>61</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>Руб.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="widget_indicators_cell_5" native="true">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>80</y>
+          <width>100</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 10px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <widget class="QLabel" name="label_6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>81</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Расходы</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_oxygen_expenses">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>28</y>
+           <width>61</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_22">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>81</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>на кислород</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_rouble_5">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>30</y>
+           <width>41</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 12pt;</string>
+         </property>
+         <property name="text">
+          <string>Руб.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="widget_indicators_cell_6" native="true">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>10</y>
+          <width>121</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 10px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>101</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 8pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Расходы </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_repair_expenses">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>30</y>
+           <width>81</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_19">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>101</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 8pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>на обслуживание</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_rouble_2">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>30</y>
+           <width>41</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 12pt;</string>
+         </property>
+         <property name="text">
+          <string>Руб.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="widget_indicators_cell_7" native="true">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>80</y>
+          <width>121</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 10px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>101</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Расходы </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_support_expenses">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>29</y>
+           <width>81</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_20">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>120</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>на содержание</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_rouble_3">
+         <property name="geometry">
+          <rect>
+           <x>80</x>
+           <y>30</y>
+           <width>41</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 12pt;</string>
+         </property>
+         <property name="text">
+          <string>Руб.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="widget_indicators_cell_8" native="true">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>80</y>
+          <width>100</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 10px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+        </property>
+        <widget class="QLabel" name="label_21">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>0</y>
+           <width>81</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Расходы</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_cooling_expenses">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>35</y>
+           <width>61</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 15pt;</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_23">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>101</width>
+           <height>10</height>
+          </rect>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 8pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>на охлаждение</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_rouble_4">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>30</y>
+           <width>41</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font-size: 12pt;</string>
+         </property>
+         <property name="text">
+          <string>Руб.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QPushButton" name="button_cooling">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>140</y>
+       <width>160</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Охлаждение</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="button_add_oxygen">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>70</y>
+       <width>160</width>
+       <height>60</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Пополнить запасы</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>10</y>
+       <width>151</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+     </property>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>111</width>
+        <height>10</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 8pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Шлеев </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>131</width>
+        <height>10</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>ПИ-428Б</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>131</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Вариант:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>131</width>
+        <height>10</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Система </string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>71</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Жизнеобеспечения</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Подводной лодки</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="button_easter_egg">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>110</y>
+        <width>151</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: #FFFCF2;
+background-color: #38302e;
+border-radius: 10px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>images/radar1.png</normaloff>images/radar1.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>85</width>
+        <height>85</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>111</width>
+        <height>10</height>
+       </rect>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LayoutDirection::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 8pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::NoFrame</enum>
+      </property>
+      <property name="text">
+       <string>Родион Вадимович</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>710</x>
+       <y>10</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 20pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string>Аварии</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>540</x>
+       <y>10</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color: #FFFCF2;
+
+border-radius: 0px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 20pt;
+font-family: Montserrat ExtraBold;
+border: 0px solid #38302e; /*&lt;----- цвет границы*/
+</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string>Решения</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTabWidget" name="tab_widget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>401</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane
+{
+	border: 1px;
+	background: #38302e;
+}
+QTabBar::tab
+{
+	background: #788585;
+	min-width: 10ex;
+	min-height: 5ex;
+	margin-left: 5px;
+	left: -5px;
+	border-radius: 8px;
+	color: white;
+}
+
+QTabBar::tab::selected
+{
+	background: #ccdad1;
+	color: black;
+}
+
+QTabBar::tab::hover
+{
+	background: #9caea9;
+	color: black;
+}</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::TabPosition::North</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Отсек 1</string>
+     </attribute>
+     <widget class="QWidget" name="widget_graphic_1" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>401</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #f4f3ee;
+background-color: #6f6866;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+/*border: 2px solid #094065; &lt;----- цвет границы*/ </string>
+      </property>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>10</y>
+         <width>160</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Утечка кислорода</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>80</y>
+         <width>160</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Утечка кислорода</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Отсек 2</string>
+     </attribute>
+     <widget class="QWidget" name="widget_graphic_2" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>401</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #f4f3ee;
+background-color: #6f6866;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+/*border: 2px solid #094065; &lt;----- цвет границы*/ </string>
+      </property>
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>10</y>
+         <width>160</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Утечка кислорода</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_12">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>80</y>
+         <width>160</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Утечка кислорода</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Отсек 3</string>
+     </attribute>
+     <widget class="QWidget" name="widget_graphic_3" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>401</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #f4f3ee;
+background-color: #6f6866;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+/*border: 2px solid #094065; &lt;----- цвет границы*/ </string>
+      </property>
+      <widget class="QPushButton" name="pushButton_13">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>10</y>
+         <width>160</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Утечка кислорода</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_14">
+       <property name="geometry">
+        <rect>
+         <x>710</x>
+         <y>80</y>
+         <width>160</width>
+         <height>60</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+color: #FFFCF2;
+background-color: #788585;
+border-radius: 15px;                     /* &lt;----  закругление краев  */ 
+font-weight: bold;
+font-size: 10pt;
+font-family: Montserrat ExtraBold;
+border: 2px solid #38302e; /*&lt;----- цвет границы*/
+}
+QPushButton:hover {
+color: #e0afa0;
+background-color: #9caea9;
+}
+QPushButton:pressed {
+color: #f4f3ee;
+background-color: #ccdad1;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Утечка кислорода</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
